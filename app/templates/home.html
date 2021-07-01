@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div id="main-container">
+        Hola Mundo
+    </div>
+
+    {% if modal_event is defined %}
+
+        <meta id="modal_event_meta" data-info="{{ modal_event.title }}">
+        <div id="modal_event" class="modal {{ modal_event.event_type }}">
+            <h3 class="modal_title">{{ modal_event.title|safe }}</h3>
+            <!-- Mediante |safe hacemos que la variable de jinja2 sea leída como HTML -->
+            <p class="modal_text">{{ modal_event.description|safe }}</p>
+            <!--<a href="#" rel="modal:close">Close</a>-->
+        </div>
+
+    {% else %}
+
+        <meta id="modal_event_meta" data-info="">
+
+    {% endif %}
+
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
