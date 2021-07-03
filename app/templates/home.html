@@ -11,7 +11,7 @@
         Hola Mundo
     </div>
 
-    {% if modal_event is defined %}
+    {% if modal_event is not none %}
 
         <meta id="modal_event_meta" data-info="{{ modal_event.title }}">
         <div id="modal_event" class="modal {{ modal_event.event_type }}">
@@ -20,10 +20,6 @@
             <p class="modal_text">{{ modal_event.description|safe }}</p>
             <!--<a href="#" rel="modal:close">Close</a>-->
         </div>
-
-    {% else %}
-
-        <meta id="modal_event_meta" data-info="">
 
     {% endif %}
 
