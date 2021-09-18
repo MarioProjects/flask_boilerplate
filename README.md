@@ -1,7 +1,6 @@
 # Flask Simple & Clean Boilerplate
 
-Aplicación de Python3 con Flask que toma la cara de una imagen y busca la de mayor similitud en una base
-de datos de caras codificadas de obras del museo del Prado.
+Aplicación de Python3 con Flask.
 
 ## Desarrollo Local
 
